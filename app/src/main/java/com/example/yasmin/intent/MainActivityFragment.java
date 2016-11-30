@@ -16,8 +16,6 @@ public class MainActivityFragment extends Fragment {
 
     Button btnHi;
     View fragmentoPrincipal;
-    View fragmentoSecundario;
-    boolean tipoPantalla;
 
     public MainActivityFragment() {
     }
@@ -34,14 +32,14 @@ public class MainActivityFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                if(fragmentoPrincipal.findViewById(R.id.fragment)==null){
+                if(getResources().getBoolean(R.bool.modoDosPantallas)){
+                    Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
+                    toast.show();
+                    //findViewById(R.id.fragmentLand);
+                }else {
                     Intent intentPrincipal = new Intent(getActivity(), SecondActivity.class);
                     startActivity(intentPrincipal);
-                }
-                if(fragmentoPrincipal.findViewById(R.id.fragmentLand)==null) {
 
-                    Toast toast = Toast.makeText(getApplicationContext(), "Abre una ventana", Toast.LENGTH_SHORT);
-                    toast.show();
                 }
             }
         });
