@@ -1,5 +1,6 @@
 package com.example.yasmin.intent;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +15,7 @@ import org.w3c.dom.Text;
  */
 public class SecondActivityFragment extends Fragment {
 
-    TextView texto;
+
     View fragmentoSecundario;
 
     public SecondActivityFragment() {
@@ -26,7 +27,8 @@ public class SecondActivityFragment extends Fragment {
 
         fragmentoSecundario = inflater.inflate(R.layout.fragment_second, container, false);
 
-        texto = (TextView)fragmentoSecundario.findViewById(R.id.text);
+
+
         return fragmentoSecundario;
     }
 }

@@ -16,6 +16,7 @@ public class MainActivityFragment extends Fragment {
 
     Button btnHi;
     View fragmentoPrincipal;
+    final static String FRASE = "Hi world!";
 
     public MainActivityFragment() {
     }
@@ -33,9 +34,12 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(getResources().getBoolean(R.bool.modoDosPantallas)){
-                    Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
-                    toast.show();
-                    //findViewById(R.id.fragmentLand);
+                    //Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
+                    //toast.show();
+                    Intent intentSecundario = new Intent(getActivity(),SecondActivityFragment.class);
+                    intentSecundario.putExtra(FRASE, "¿Qué tal mundo?");
+                    startActivity(intentSecundario);
+
                 }else {
                     Intent intentPrincipal = new Intent(getActivity(), SecondActivity.class);
                     startActivity(intentPrincipal);
