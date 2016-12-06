@@ -19,10 +19,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Intent intent = getIntent();
-        String nombre = intent.getStringExtra(MainActivityFragment.FRASE);
-        texto = (TextView)findViewById(R.id.text);
-        texto.setText(nombre);
+            Intent intent = getIntent();
+            String nombre = intent.getStringExtra(MainActivityFragment.FRASE);
+            texto = (TextView) findViewById(R.id.text);
+            texto.setText(nombre);
+
     }
 
 }

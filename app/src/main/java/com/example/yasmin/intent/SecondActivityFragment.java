@@ -24,9 +24,7 @@ public class SecondActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         fragmentoSecundario = inflater.inflate(R.layout.fragment_second, container, false);
-
 
 
         return fragmentoSecundario;

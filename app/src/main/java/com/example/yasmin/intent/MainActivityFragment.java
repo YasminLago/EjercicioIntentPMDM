@@ -36,12 +36,15 @@ public class MainActivityFragment extends Fragment {
                 if(getResources().getBoolean(R.bool.modoDosPantallas)){
                     //Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
                     //toast.show();
-                    Intent intentSecundario = new Intent(getActivity(),SecondActivityFragment.class);
+                    Intent intentSecundario = new Intent(getActivity(),SecondActivity.class);
                     intentSecundario.putExtra(FRASE, "¿Qué tal mundo?");
                     startActivity(intentSecundario);
 
                 }else {
-                    Intent intentPrincipal = new Intent(getActivity(), SecondActivity.class);
+                   // Intent intentPrincipal = new Intent(getActivity(), SecondActivity.class);
+                   // startActivity(intentPrincipal);
+                    Intent intentPrincipal = new Intent(getActivity(),SecondActivity.class);
+                    intentPrincipal.putExtra(FRASE, "¿Qué tal mundo?");
                     startActivity(intentPrincipal);
 
                 }
