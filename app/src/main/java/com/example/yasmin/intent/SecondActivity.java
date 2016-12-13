@@ -12,18 +12,15 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     TextView texto;
-
+    String nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
-            Intent intent = getIntent();
-            String nombre = intent.getStringExtra(MainActivityFragment.FRASE);
-            texto = (TextView) findViewById(R.id.text);
-            texto.setText(nombre);
-
+                Intent intent = getIntent();
+                nombre = intent.getStringExtra(MainActivityFragment.FRASE);
+                texto = (TextView) findViewById(R.id.text);
+                texto.setText(nombre);
     }
-
 }

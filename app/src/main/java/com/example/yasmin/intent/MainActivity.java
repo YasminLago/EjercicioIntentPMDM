@@ -1,19 +1,25 @@
 package com.example.yasmin.intent;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainActivityFragment.Comunicador{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    public void mensaje(String texto) {
+            SecondActivityFragment secondFragment = (SecondActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLand);
+            if(secondFragment != null) {
+                secondFragment.cambiarTexto(texto);
+            }
+    }
+
 }
+
+
+
