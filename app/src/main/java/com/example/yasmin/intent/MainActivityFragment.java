@@ -30,6 +30,7 @@ public class MainActivityFragment extends Fragment{
     Button btnHi;
     View fragmentoPrincipal;
     final static String FRASE = "Hi world!";
+    final static String FRASEVISIBLE = "Adiós mundo";
 
     public MainActivityFragment(){
     }
@@ -47,13 +48,13 @@ public class MainActivityFragment extends Fragment{
                 if(getResources().getBoolean(R.bool.modoDosPantallas)){
                     //Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
                     //toast.show();
-                    comunicador.mensaje("Adiós mundo");
+                    comunicador.mensaje(MainActivityFragment.FRASEVISIBLE);
 
                 }else {
                    // Intent intentPrincipal = new Intent(getActivity(), SecondActivity.class);
                    // startActivity(intentPrincipal);
                     Intent intentPrincipal = new Intent(getActivity(),SecondActivity.class);
-                    intentPrincipal.putExtra(MainActivityFragment.FRASE, "Adiós mundo");
+                    intentPrincipal.putExtra(MainActivityFragment.FRASE, MainActivityFragment.FRASEVISIBLE);
                     startActivity(intentPrincipal);
                 }
             }
