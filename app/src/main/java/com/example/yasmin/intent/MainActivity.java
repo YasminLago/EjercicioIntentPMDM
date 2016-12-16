@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityFragm
 
     @Override
     public void mensaje(String texto) {
+            //FragmentManager: clase que permite interactuar con un Fragment dentro de una Activity.
             SecondActivityFragment secondFragment = (SecondActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLand);
             if(secondFragment != null) {
                 secondFragment.cambiarTexto(texto);
