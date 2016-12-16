@@ -31,6 +31,10 @@ public class SecondActivityFragment extends Fragment {
         return fragmentoSecundario;
     }
 
+    /**
+     * Recibe el texto que debe aparecer en el TextView y lo muestra en él
+     * @param text
+     */
     public void cambiarTexto(String text){
         texto.setText(text);
     }

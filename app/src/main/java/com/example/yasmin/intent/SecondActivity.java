@@ -18,9 +18,9 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-                Intent intent = getIntent();
-                nombre = intent.getStringExtra(MainActivityFragment.FRASE);
+                Intent intent = getIntent(); //Se recoge el intent creado en el fragmento principal
+                nombre = intent.getStringExtra(MainActivityFragment.FRASE); // Se guarda el mensaje en un String
                 texto = (TextView) findViewById(R.id.text);
-                texto.setText(nombre);
+                texto.setText(nombre); //Se envía el mensaje al TextView
     }
 }
