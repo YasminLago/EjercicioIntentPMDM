@@ -89,9 +89,9 @@ public class MainActivityFragment extends Fragment{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == MENSAJE && resultCode == RESULT_OK){
-            String resultado = String.valueOf(RESULT_OK);
+            //String resultado = String.valueOf(RESULT_OK);
             String textoDevuelto = data.getStringExtra("TEXTO");
-            Log.d("blblabla","TEXTO SALIDA"+ "MENSAJE"+ MENSAJE + "requestCode"+requestCode);
+            //Log.d("blblabla","TEXTO SALIDA"+ "MENSAJE"+ MENSAJE + "requestCode"+requestCode);
             textoRecibido.setText(textoDevuelto);
 
 
