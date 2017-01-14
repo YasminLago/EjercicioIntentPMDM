@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EjercicioIntent.iml" filepath="$PROJECT_DIR$/EjercicioIntent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjercicioIntentPMDM.iml" filepath="$PROJECT_DIR$/EjercicioIntentPMDM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
