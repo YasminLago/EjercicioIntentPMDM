@@ -10,6 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.yasmin.intent.SecondActivityFragment"
     tools:showIn="@layout/activity_second">
+    <!--android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"-->
 
     <TextView
         android:id="@+id/text"
@@ -22,20 +24,23 @@
         android:layout_marginTop="79dp" />
 
     <EditText
-        android:id="@+id/textoADevolver"
+        android:id="@+id/textoDevolver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:hint="Texto de entrada" />
+        android:hint="Escribe aqui el texto para devolver" />
+        <!-- android:nextFocusUp="@id/textoDevolver"
+        android:nextFocusLeft="@id/textoDevolver" -->
+
 
     <Button
-        android:id="@+id/btnHi"
+        android:id="@+id/btnDevolverTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="141dp"
-        android:text="@string/button"
+        android:text="@string/buttonDevolver"
         android:layout_gravity="center"
         />
 
