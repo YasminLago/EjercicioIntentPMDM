@@ -83,16 +83,16 @@ public class MainActivityFragment extends Fragment{
      * Permite usar los datos obtenidos de la actividad que ha sido llamada (SecondActivity)
      * @param requestCode Indentifica que Activity está proporcionando los resultados
      * @param resultCode Valor retornado por la Activity que ha sido llamada (SecondActivity)
-     * @param data Retorna datos a la Activity que ha realizado la llamada (MAinActivityFragment)
+     * @param data Retorna datos a la Activity que ha realizado la llamada (MainActivityFragment)
      */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == MENSAJE && resultCode == RESULT_OK){
-            String resultado = String.valueOf(RESULT_OK);
-            String textoDevuelto = data.getStringExtra("TEXTO");
-            Log.d("blblabla","TEXTO SALIDA"+ "MENSAJE"+ MENSAJE + "requestCode"+requestCode);
-            textoRecibido.setText(textoDevuelto);
+            //String resultado = String.valueOf(RESULT_OK);
+            String textoDevuelto = data.getStringExtra("TEXTO"); //Recibe el texto introducido en el EditText de la SecondActivity
+            //Log.d("blblabla","TEXTO SALIDA"+ "MENSAJE"+ MENSAJE + "requestCode"+requestCode);
+            textoRecibido.setText(textoDevuelto); //Muestra el texto del EditText en el TextView
 
 
         }

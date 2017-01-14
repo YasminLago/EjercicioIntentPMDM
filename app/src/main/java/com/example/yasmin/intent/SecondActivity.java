@@ -36,8 +36,8 @@ public class SecondActivity extends AppCompatActivity {
                         String textoEscrito = txtDevuelto.getText().toString();
                         Intent retorna =  new Intent();
                         retorna.putExtra("TEXTO", textoEscrito);
-                        setResult(RESULT_OK, retorna);
-                        finish();
+                        setResult(RESULT_OK, retorna); //Retorna el Intent creado a la primera actividad
+                        finish(); //Finaliza la actividad
                     }
                 });
     }
